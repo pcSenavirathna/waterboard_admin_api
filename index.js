@@ -29,6 +29,11 @@ app.get('/users', async (req, res) => {
   }
 });
 
+// Root endpoint for health check or welcome message
+app.get('/', (req, res) => {
+  res.send('API running');
+});
+
 const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`API server running on port ${PORT}`);
